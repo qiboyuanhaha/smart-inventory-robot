@@ -1,0 +1,18 @@
+{
+  "name": "ROS Noetic Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-iot.vscode-ros",
+    "ms-vscode.cpptools",
+    "ms-azuretools.vscode-docker"
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder}/data,target=/root/data,type=bind"
+  ],
+  "postCreateCommand": "rosdep update && rosdep install --from-paths src --ignore-src -r -y"
+}
