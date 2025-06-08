@@ -14,5 +14,5 @@
   "mounts": [
     "source=${localWorkspaceFolder}/data,target=/root/data,type=bind"
   ],
-  "postCreateCommand": "rosdep update && rosdep install --from-paths src --ignore-src -r -y"
+  "postCreateCommand": "rosdep update"
 }
